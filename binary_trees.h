@@ -1,7 +1,9 @@
-#ifndef _BINARY_TREES_
-#define _BINARY_TREES_
+#ifndef _BINARY_TREES_H
+#define _BINARY_TREES_H
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <stddef.h>
 
 /**
  * struct binary_tree_s - Binary tree node
@@ -24,6 +26,8 @@ typedef struct binary_tree_s binary_tree_t;
 typedef struct binary_tree_s bst_t;
 typedef struct binary_tree_s avl_t;
 typedef struct binary_tree_s heap_t;
+
+void binary_tree_print(const binary_tree_t *);
 
 /*Prototype*/
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
@@ -67,4 +71,4 @@ heap_t *array_to_heap(int *array, size_t size);
 int heap_extract(heap_t **root);
 int *heap_to_sorted_array(heap_t *heap, size_t *size);
 
-#endif
+#endif /* _BINARY_TREES_H_ */
